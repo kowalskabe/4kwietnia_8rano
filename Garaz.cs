@@ -29,5 +29,50 @@ namespace Laboratory1
                 samochody = new Samochod[pojemnosc];
             }
         }
+
+        public Garaz()
+        {
+            adres = "nieznany";
+            pojemnosc = 0;
+            samochody = null;
+        }
+
+        public Garaz (string adres_, int pojemnosc_)
+        {
+            adres = adres_;
+            pojemnosc = pojemnosc_;
+            samochody = new Samochod[pojemnosc];
+        }
+
+        public void WprowadzSamochod (Samochod s)
+        {
+            if (liczbaSamochodow >= pojemnosc)
+            {
+                Console.WriteLine("Nie da się wprowadzić samochodu");
+            }
+            else
+            {
+                samochody[liczbaSamochodow] = s;
+                liczbaSamochodow++;
+            }
+        }
+
+        public Samochod WyprowadzSamochod()
+        {
+            if (liczbaSamochodow == 0)
+            {
+                Console.WriteLine("Garaż jest pusty");
+                return null;
+            }
+            else
+            {
+                Samochod kopiaSamochodu = samochody[liczbaSamochodow];
+                samochody[liczbaSamochodow] = null;
+                liczbaSamochodow--;
+                return kopiaSamochodu;
+            }
+        }
+
+
     }
 }
