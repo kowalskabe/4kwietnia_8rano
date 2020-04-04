@@ -10,6 +10,7 @@ namespace Laboratory1
     {
         private string marka;
         private string model;
+        private string numerRejestracyjny;
         private int iloscDrzwi;
         private int pojemnoscSilnika;
         private double srednieSpalanie;
@@ -26,6 +27,13 @@ namespace Laboratory1
             get { return model; }
             set { model = value; }
         }
+
+        public string NumerRejestracyjny
+        {
+            get { return numerRejestracyjny; }
+            set { numerRejestracyjny = value; }
+        }
+
 
         public int IloscDrzwi
         {
@@ -51,6 +59,7 @@ namespace Laboratory1
         {
             marka = "nieznana";
             model = "nieznany";
+            numerRejestracyjny = "nieznany";
             iloscDrzwi = 0;
             pojemnoscSilnika = 0;
             srednieSpalanie = 0.0;
@@ -58,10 +67,11 @@ namespace Laboratory1
             iloscSamochodow++;
         }
 
-        public Samochod (string marka_, string model_, int iloscDrzwi_, int pojemnoscSilnika_, double srednieSpalanie_)
+        public Samochod (string marka_, string model_, string numerRejestracyjny_, int iloscDrzwi_, int pojemnoscSilnika_, double srednieSpalanie_)
         {
             marka = marka_;
             model = model_;
+            numerRejestracyjny = numerRejestracyjny_;
             iloscDrzwi = iloscDrzwi_;
             pojemnoscSilnika = pojemnoscSilnika_;
             srednieSpalanie = srednieSpalanie_;
@@ -85,6 +95,7 @@ namespace Laboratory1
         {
             Console.WriteLine($"Marka:{marka}");
             Console.WriteLine($"Model:{model}");
+            Console.WriteLine($"Numer rejestracyjny:{numerRejestracyjny}");
             Console.WriteLine($"Ilosc drzwi:{iloscDrzwi}");
             Console.WriteLine($"Pojemność silnika:{pojemnoscSilnika}");
             Console.WriteLine($"Srednie spalanie:{srednieSpalanie}\n");
