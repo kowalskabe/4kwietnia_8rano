@@ -21,7 +21,11 @@ namespace Laboratory1
             set { marka  = value; }
         }
 
-        public string Model { get; set; }
+        public string Model
+        {
+            get { return model; }
+            set { model = value; }
+        }
 
         public int IloscDrzwi
         {
@@ -77,8 +81,19 @@ namespace Laboratory1
             return kosztPrzejazdu;
         }
 
+        public void WypiszInfo()
+        {
+            Console.WriteLine($"Marka:{marka}");
+            Console.WriteLine($"Model:{model}");
+            Console.WriteLine($"Ilosc drzwi:{iloscDrzwi}");
+            Console.WriteLine($"Pojemność silnika:{pojemnoscSilnika}");
+            Console.WriteLine($"Srednie spalanie:{srednieSpalanie}\n");
+        }
 
-
+        public static void WypiszIloscSamochodow()
+        {
+            Console.WriteLine($"Ilość utworzonych obiektów typu Samochód: {iloscSamochodow}\n");
+        }
 
     }
 }
