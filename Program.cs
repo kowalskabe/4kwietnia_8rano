@@ -23,6 +23,7 @@ namespace Laboratory1
             double kosztPrzejazdu = s2.ObliczKosztPrzejazdu(30.5, 4.85);
             Console.WriteLine("Koszt przejazdu: " + kosztPrzejazdu);
             Samochod.WypiszIloscSamochodow();
+            Console.WriteLine();
             Console.ReadKey();
 
         }
