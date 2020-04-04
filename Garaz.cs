@@ -61,18 +61,25 @@ namespace Laboratory1
         {
             if (liczbaSamochodow == 0)
             {
-                Console.WriteLine("Garaż jest pusty");
+                Console.WriteLine("Garaż jest pusty\n");
                 return null;
             }
             else
             {
+                liczbaSamochodow--;
                 Samochod kopiaSamochodu = samochody[liczbaSamochodow];
                 samochody[liczbaSamochodow] = null;
-                liczbaSamochodow--;
+                
                 return kopiaSamochodu;
             }
         }
 
-
+        public void WypiszInfo()
+        {
+            for (int i = 0; i < liczbaSamochodow; i++)
+            {
+                samochody[i].WypiszInfo();
+            }
+        }
     }
 }
