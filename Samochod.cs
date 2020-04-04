@@ -8,5 +8,6 @@ namespace Laboratory1
 {
     class Samochod
     {
+        private string marka;
     }
 }
