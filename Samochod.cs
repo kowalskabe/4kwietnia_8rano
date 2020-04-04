@@ -43,6 +43,42 @@ namespace Laboratory1
 
         private static int iloscSamochodow = 0;
 
+        public Samochod ()
+        {
+            marka = "nieznana";
+            model = "nieznany";
+            iloscDrzwi = 0;
+            pojemnoscSilnika = 0;
+            srednieSpalanie = 0.0;
+
+            iloscSamochodow++;
+        }
+
+        public Samochod (string marka_, string model_, int iloscDrzwi_, int pojemnoscSilnika_, double srednieSpalanie_)
+        {
+            marka = marka_;
+            model = model_;
+            iloscDrzwi = iloscDrzwi_;
+            pojemnoscSilnika = pojemnoscSilnika_;
+            srednieSpalanie = srednieSpalanie_;
+
+            iloscSamochodow++;
+        }
+
+        private double ObliczSpalanie(double dlugoscTrasy)
+        {
+            return (srednieSpalanie * dlugoscTrasy) / 100;
+        }
+
+        public double ObliczKosztPrzejazdu(double dlugoscTrasy, double cenaPaliwa)
+        {
+            double spalanie = ObliczSpalanie(dlugoscTrasy);
+            double kosztPrzejazdu = spalanie * cenaPaliwa;
+            return kosztPrzejazdu;
+        }
+
+
+
 
     }
 }
