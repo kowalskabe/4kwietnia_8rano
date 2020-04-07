@@ -45,12 +45,14 @@ namespace Laboratory1
             iloscSamochodow = 0;
         }
 
-        public Osoba(string imie_, string nazwisko_, string adresZamieszkania_, string iloscSamochodow_)
+        public Osoba(string imie_, string nazwisko_, string adresZamieszkania_, int iloscSamochodow_)
         {
             imie = imie_;
             nazwisko = nazwisko_;
             adresZamieszkania = adresZamieszkania_;
-            iloscSamochodow = 0;
+            if (iloscSamochodow_ > MaxIloscSamochodow) iloscSamochodow_ = MaxIloscSamochodow;
+            else if (iloscSamochodow_ < 0) iloscSamochodow_ = 0; 
+            iloscSamochodow = iloscSamochodow_;
         }
 
     }
