@@ -61,7 +61,7 @@ namespace Laboratory1
         {
             if (liczbaSamochodow == 0)
             {
-                Console.WriteLine("Garaż jest pusty\n");
+                Console.WriteLine("Garaż jest pusty");
                 return null;
             }
             else
